@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOA Kennis Quiz – JS Legal Force</title>
+  <link rel="stylesheet" href="stijl.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="quiz-header">
+    <div class="header-deco links"></div>
+    <div class="header-inner">
+      <span class="logo-tekst">JS Legal Force</span>
+    </div>
+    <div class="header-deco rechts"></div>
+  </header>
+
+  <!-- HOOFD WRAPPER -->
+  <main class="quiz-wrapper">
+
+    <!-- ==================== STARTSCHERM ==================== -->
+    <div id="scherm-start" class="scherm actief">
+      <div class="card">
+        <span class="start-badge">BOA Domein I – Openbare Ruimte</span>
+        <h1 class="start-titel">Kennis Quiz</h1>
+        <p class="start-ondertitel">
+          Test je kennis over bevoegdheden, APV, WAHV, openbare orde en praktijkscenario's.
+        </p>
+
+        <div class="start-info-grid">
+          <div class="info-item">
+            <span class="info-getal">10</span>
+            <span class="info-label">Vragen</span>
+          </div>
+          <div class="info-item">
+            <span class="info-getal">70%</span>
+            <span class="info-label">Slagingsdrempel</span>
+          </div>
+          <div class="info-item">
+            <span class="info-getal">40</span>
+            <span class="info-label">Vragenbank</span>
+          </div>
+        </div>
+
+        <button id="btn-start" class="knop-primair">
+          Start de quiz →
+        </button>
+      </div>
+    </div>
+
+    <!-- ==================== VRAAGSCHERM ==================== -->
+    <div id="scherm-vraag" class="scherm">
+
+      <!-- Voortgangsbalk -->
+      <div class="voortgang-wrapper">
+        <div class="voortgang-header">
+          <span id="voortgang-tekst" class="voortgang-label">Vraag 1 van 10</span>
+        </div>
+        <div class="voortgang-track">
+          <div id="voortgang-balk" class="voortgang-balk"></div>
+        </div>
+      </div>
+
+      <!-- Vraagkaart -->
+      <div class="card">
+        <p class="vraag-nummer">Vraag</p>
+        <p id="vraag-tekst" class="vraag-tekst"></p>
+
+        <div id="opties-container" class="opties-container"></div>
+
+        <!-- Feedback -->
+        <div id="feedback-container" class="feedback-container">
+          <span class="feedback-icon" id="feedback-icon"></span>
+          <span id="feedback-tekst"></span>
+        </div>
+
+        <!-- Volgende knop -->
+        <button id="btn-volgende" class="knop-primair">
+          Volgende vraag →
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ==================== EINDSCHERM ==================== -->
+    <div id="scherm-einde" class="scherm">
+      <div class="card">
+        <div class="einde-header">
+          <h2 class="einde-titel">Resultaat</h2>
+          <p class="einde-subtitel">Hier is je eindresultaat</p>
+        </div>
+
+        <div class="score-cirkel-wrapper">
+          <div class="score-blok">
+            <div id="eind-percentage" class="score-getal">—</div>
+            <div class="score-label">Behaald percentage</div>
+            <div id="eind-score" class="score-detail"></div>
+          </div>
+        </div>
+
+        <div id="eind-beoordeling" class="beoordeling"></div>
+        <p id="eind-beoordeling-tekst" class="beoordeling-tekst"></p>
+
+        <button id="btn-herstart" class="knop-primair">
+          Opnieuw proberen →
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="quiz-footer">
+    © JS Legal Force – BOA Domein I Kennis Quiz
+  </footer>
+
+  <!-- Scripts -->
+  <script src="vragen.js"></script>
+  <script src="quiz.js"></script>
+
+</body>
+</html>
